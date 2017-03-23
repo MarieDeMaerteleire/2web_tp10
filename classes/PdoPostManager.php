@@ -7,7 +7,7 @@
  * Time: 15:33
  */
 
-require('C:\Users\riima\PhpstormProjects\tp10\classes\PostManager.php');
+require('.\PostManager.php');
 
 class PdoPostManager implements PostManager
 {

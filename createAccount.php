@@ -2,45 +2,47 @@
 /**
  * Created by PhpStorm.
  * User: riima
- * Date: 22/03/2017
- * Time: 15:38
+ * Date: 23/03/2017
+ * Time: 09:46
  */
 define("USER", 'root');
 define("PASSWORD", 'root');
 define("DSN", 'mysql:host=localhost;port=8889;dbname=dblogin');
 
-
-function login(){
+if($_POST['username']!= null && $_POST['password']!= null) {
     try {
         $pdo = new PDO(DSN, USER, PASSWORD);
     } catch (PDOException $e) {
         die("Error ! : " . $e->getMessage());
     }
+    $sql1 = "INSERT INTO users (Username, Password) 
+			    VALUES (:username,:password)";
+    $statement = $pdo->prepare($sql1);
 
-    $sql = "SELECT username, password FROM users";
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    $statement->execute(
+        array(':username' => $username,
+            ':password' => $password
+        )
+    );
+
+
+    $sql = "SELECT username FROM users";
 
     $sth = $pdo->query($sql);
     $result = $sth->fetchAll(PDO::FETCH_ASSOC);
-    print_r($result);
 
 
-    if(isset($_POST['username'])) {
-        for( $i = 0; $i < sizeof($result); $i++){
-            if ($result[$i]['username'] == $_POST['username'] && ($result[$i]['password'] == $_POST['password'])) {
-                $_SESSION['username'] = $_POST['username'];
-            }
-        }
-    }
+    unset($pdo);
 }
-session_start();
-login();
-session_destroy();
-
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login</title>
+    <title>Create your account</title>
     <meta charset="utf-8" />
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
@@ -54,9 +56,9 @@ session_destroy();
 
 </head>
 <body>
-<h1>LOGIN PAGE</h1>
+<h1>Create your account</h1>
 
-<form id="form" class="col s6"  action="server.php" method="POST">
+<form id="form" class="col s6"  action="createAccount.php" method="POST">
     <div class="input-field col s6">
         <input type="text" name="username" value="">
         <label for="username">Username</label>
@@ -65,8 +67,7 @@ session_destroy();
         <input id="password" type="password" class="validate" name="password" value="">
         <label for="password">Password</label>
     </div>
-
-    <button class="btn waves-effect waves-light" type="submit" name="submit" value="Login">LOGIN
+    <button class="btn waves-effect waves-light" type="submit" name="submit" value="create">Create
         <i class="material-icons right">send</i>
     </button>
     <?php if($_SESSION['username']): ?>
@@ -75,7 +76,5 @@ session_destroy();
         <button href="?logout=1" class="btn waves-effect waves-light" type="submit" name="submit" value="Logout">LOGOUT
             <i class="material-icons right">send</i>
         </button>
-    <?php endif; ?>
+    <?php endif;?>
 </form>
-</body>
-
