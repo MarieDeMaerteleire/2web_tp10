@@ -41,10 +41,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PdoPostManager.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PdoPostManager.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/PdoPostManager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
+            <state relative-caret-position="-69">
               <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding>
                 <element signature="e#7#88#0#PHP" expanded="true" />
@@ -67,10 +67,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="createAccount.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="createAccount.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/createAccount.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
+            <state relative-caret-position="-460">
               <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding>
                 <marker date="1490260052567" expanded="true" signature="418:493" ph="INSERT INTO users... " />
@@ -301,12 +301,12 @@
       <option name="presentableId" value="Default" />
       <updated>1490176362625</updated>
       <workItem from="1490176364514" duration="11097000" />
-      <workItem from="1490256787840" duration="5902000" />
+      <workItem from="1490256787840" duration="6025000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16999000" />
+    <option name="totallyTimeSpent" value="17122000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -462,17 +462,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/createAccount.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <marker date="1490260052567" expanded="true" signature="418:493" ph="INSERT INTO users... " />
-            <marker date="1490260052567" expanded="true" signature="742:768" ph="SELECT First... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-69">
@@ -497,10 +486,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/PdoPostManager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
+        <state relative-caret-position="-69">
           <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
             <element signature="e#7#88#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/createAccount.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-460">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <marker date="1490260052567" expanded="true" signature="418:493" ph="INSERT INTO users... " />
+            <marker date="1490260052567" expanded="true" signature="742:768" ph="SELECT First... users" />
           </folding>
         </state>
       </provider>
